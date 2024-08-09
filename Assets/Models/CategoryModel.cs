@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class CategoryModel
 {
     public string name;
+    public string surname;
 
     public List<QuestionModel> Questions;
 }
