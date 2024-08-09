@@ -12,5 +12,7 @@ public class QuestionModel
     public string Answer4;
     
     public int CorrectIndex;
+
+    public int age;
     
 };
