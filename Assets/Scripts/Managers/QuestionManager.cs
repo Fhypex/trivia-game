@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
+using System;
 public class QuestionManager : Singleton<QuestionManager>
 {
-    
+    public static Action onNewQuestionLoaded;
     public QuestionUI Question;
     private GameManager _gameManager;
+    public Transform CorrectImage;
+    public Transform WrongImage;
 
     private QuestionModel _currentQuestion;
     public string CategoryName;
@@ -35,8 +38,23 @@ public class QuestionManager : Singleton<QuestionManager>
         if(_currentQuestion != null){
             Question.PopulateQuestion(_currentQuestion);
         }
+        onNewQuestionLoaded?.Invoke();
     }
     public bool AnswerQuestion(int Index){
-        return _currentQuestion.CorrectIndex == Index;
+        bool iscorrect = _currentQuestion.CorrectIndex == Index;
+        if(iscorrect){
+            TweenResult(CorrectImage);
+        }else{
+            TweenResult(WrongImage);
+        }
+        return iscorrect;
+    }
+
+    void TweenResult(Transform resultTransform){
+        Sequence result = DOTween.Sequence();
+        result.Append(resultTransform.DOScale(1,.5f).SetEase(Ease.OutBack));
+        result.AppendInterval(1f);
+        result.Append(resultTransform.DOScale(0,.2f).SetEase(Ease.Linear));
+        result.AppendCallback(LoadNextQuestion);
     }
 }
