@@ -14,10 +14,12 @@ public class AnswerUI : MonoBehaviour
         bool result = QuestionManager.Instance.AnswerQuestion(AnswerIndex);
         if(result){
             CorrectImage.DOFade(1,.5f);
+            
         }
         else{
             IncorrectImage.DOFade(1,.5f);
         }
-        Debug.Log(result);
+        
+        QuestionManager.Instance.LoadNextQuestion();
    }
 }
