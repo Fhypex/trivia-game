@@ -26,6 +26,7 @@ public class MathQuestionManager : MonoBehaviour
 
     void GenerateMathQuestion()
     {
+        // QASDWQEQWE
         int num1 = Random.Range(1, 10);  // Random number between 1 and 9
         int num2 = Random.Range(1, 10);  // Random number between 1 and 9
         correctAnswer = num1 + num2;
