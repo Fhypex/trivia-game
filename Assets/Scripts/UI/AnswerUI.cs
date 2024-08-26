@@ -11,7 +11,7 @@ public class AnswerUI : MonoBehaviour
     public Image IncorrectImage;
     public int AnswerIndex;
    public void OnAnswerClicked(){
-        bool result = QuestionManager.Instance.AnswerQuestion(AnswerIndex);
+        bool result = /* QuestionManager.Instance.AnswerQuestion(AnswerIndex); */ true;
         if(result){
             CorrectImage.DOFade(1,.5f);
         }

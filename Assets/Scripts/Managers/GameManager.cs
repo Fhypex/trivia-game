@@ -3,9 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class GameManager : Singleton<GameManager>
+/* public class GameManager : Singleton<GameManager>
 {
-    public  GameModel Configuration;
+    private  GameModel configuration;
+    private SQLiteDriver dbDriver;
+
+    public GameManager(GameModel configuration, SQLiteDriver dbDriver)
+    {
+        this.configuration = configuration;
+        this.dbDriver = dbDriver;
+    }
+
+    void Start()
+    {
+        dbDriver = new SQLiteDriver();
+        dbDriver.setConnectionString("URI=file:toudb.sqlite");
+        dbDriver.OpenConnection();
+        Configuration = new GameModel();
+        Configuration.Categories = new List<CategoryModel>();
+    }
 
     public  QuestionModel GetQuestionForCategory(string categoryName){
 
@@ -18,3 +34,4 @@ public class GameManager : Singleton<GameManager>
         return null;
     }
 }
+ */
