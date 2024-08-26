@@ -20,7 +20,7 @@ public class AnswerUI : MonoBehaviour
 
 
    public void OnAnswerClicked(){
-        bool result = QuestionManager.Instance.AnswerQuestion(AnswerIndex);
+        bool result = /* QuestionManager.Instance.AnswerQuestion(AnswerIndex); */ true;
         if(result){
             CorrectImage.DOFade(1,.5f);
             

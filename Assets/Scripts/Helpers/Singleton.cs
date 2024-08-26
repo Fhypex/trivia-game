@@ -16,6 +16,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
    /// </summary>
    public static T Instance => _instance;
 
+   public static bool IsInitialized => _instance != null;
+
+   public static T GetInstance()
+   {
+      return _instance;
+   }
+
    /// <summary>
    /// Cast this to the instance
    /// </summary>
@@ -23,4 +30,5 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
    {
       _instance = (T) (object) this;
    }
+   
 }
