@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4-SinglePlayerTimeBasedMenu.unity
     guid: 9141571d44a436047bf0642746e8b96f
+  - enabled: 1
+    path: Assets/Scenes/5-StreakScene.unity
+    guid: ec88704f3c7b2f64ea45e3d802c4ecfb
+  - enabled: 1
+    path: Assets/Scenes/6-StreakSceneMenu.unity
+    guid: 0fe4448441b50fc44a3598b338705aff
+  - enabled: 1
+    path: Assets/Scenes/7-ProgressScene.unity
+    guid: 6c77219c489115449baf5470599f1b9f
+  - enabled: 1
+    path: Assets/Scenes/8-ProgressSceneMenu.unity
+    guid: 7d86f73236ade0b419bfec689d54787e
   m_configObjects: {}

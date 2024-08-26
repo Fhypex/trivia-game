@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "trivia-game.sln"
+    "dotnet.defaultSolution": "trivia-game2.sln"
 }
